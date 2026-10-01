@@ -1,11 +1,45 @@
-<header>
-<h1 style="text-align: center; margin: 3% 0 3% 0">
-    <img src="header-dark.svg#gh-dark-mode-only" width="400px" height="88.15px" style="max-width: min(90%, 400px, calc(100vw - 80px));">
-    <img src="header.svg#gh-light-mode-only" width="400px" height="88.15px" style="max-width: min(90%, 400px, calc(100vw - 80px));">
-</h1>
-</header>
+#include <stdio.h>
 
-# 
+// Define a structure to hold profile data
+typedef struct {
+    char name[50];
+    char title[50];
+    int age;
+    char location[50];
+    char primary_languages[100];
+    char github[100];
+} Profile;
+
+void print_profile(Profile p) {
+    printf("====================================================\n");
+    printf("                  USER PROFILE                      \n");
+    printf("====================================================\n");
+    printf("  Name:              %s\n", p.name);
+    printf("  Title:             %s\n", p.title);
+    printf("  Age:               %d\n", p.age);
+    printf("  Location:          %s\n", p.location);
+    printf("  Languages:         %s\n", p.primary_languages);
+    printf("  GitHub:            %s\n", p.github);
+    printf("====================================================\n");
+}
+
+int main() {
+    // Initialize profile data
+    Profile my_profile = {
+        .name = "ABU SAYEED",
+        .title = "Electrical Engineer",
+        .age = 20,
+        .location = "chattogram, Bangladesh",
+        .primary_languages = "C, C++, Python, SQL",
+        .github = "github.com/alexmercer"
+    };
+
+    // Display the profile
+    print_profile(my_profile);
+
+    return 0;
+}
+How to Run It
 
 Mingw-w64 is a collection of header files, import libraries, libraries and tools
 that, when combined with a compiler toolchain, such as GCC or LLVM, provides a
